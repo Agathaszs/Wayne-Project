@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos - Indústrias Wayne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/recursos.css">
+</head>
+<body>
+
+  <header>
+    <h1>Gerenciamento de Recursos</h1>
+    <nav>
+      <button id="dashboardButton">Dashboard</button>
+      <button id="logoutButton">Sair</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <form id="resourceForm" class="hidden">
+
+        <h2>Adicionar Recurso</h2>
+
+        <label for="resourceType">Tipo:</label>
+        <select id="resourceType" required>
+          <option value="equipamento">Equipamento</option>
+          <option value="veiculo">Veículo</option>
+          <option value="dispositivo">Dispositivo de Segurança</option>
+        </select>
+
+        <label for="resourceName">Nome:</label>
+        <input type="text" id="resourceName" required>
+
+        <label for="resourceDescription">Descrição:</label>
+        <textarea id="resourceDescription" required></textarea>
+        
+        <label for="resourceQuantity">Quantidade:</label>
+        <input type="number" id="resourceQuantity" required>
+
+        <label for="resourceStatus">Status:</label>
+        <select id="resourceStatus" required>
+          <option value="em_uso">Em Uso</option>
+          <option value="nao_uso">Não em Uso</option>
+          <option value="danificado">Danificado</option>
+        </select>
+
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Lista de Recursos</h2>
+      <ul id="resourceList"></ul>
+    </section>
+
+  </main> 
+
+  <script src="/static/js/recursos.js"></script>
+</body>
+</html>
